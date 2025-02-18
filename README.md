@@ -24,5 +24,5 @@ The Guardians
 
 Each class has its own abilities, strengths, and weaknesses. 
 
-#Story: 
+# Story: 
 The story has yet to be written and will allow the player to make choices that may, or may not, have dire consequences. 
