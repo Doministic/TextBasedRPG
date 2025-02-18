@@ -1,0 +1,40 @@
+//Tank 
+Warrior -- Heavy Hit Points Physical Damage / Def
+Paladin -- Heavy Hit Points Magical Damage / Def
+
+//DPS
+Rogue -- Close Range Melee DPS
+Hunter -- Long Range Melee DPS
+Warlock -- Close Range Magic DPS 
+Mage -- Long Range Magic DPS
+
+//Heal
+Cleric -- Magical Health (Mana)
+Voodoo -- Potion Health (Alcahmy / Dextrity) 
+
+All Characters have: 
+ - Level (Max everything goes up with level) -- Experience
+   -- Base level starts at 1
+   -- Max Level player should not level up past this
+   -- takes in experience and increases everything else
+ - Health (hitpoints)
+   -- Add Health (Get Healed)
+   -- Increase Max Health (Level up... etc)
+   -- Take Damage 
+   -- Display Health
+ - Attack (Physical attack)
+ - Special Attack (Magical Attack)
+ - Defence (Physical Defence)
+ - Special Defence (Magical Defence)
+ - Dextrity (Speed)
+ - Crit Chance (Luck)
+ 
+Battle System (Turn Based)
+ - 1 attack / spell / craft
+ - Different Monsters  with different stats
+
+Experience System
+ - Kill Monster Exp
+ - Travel Exp (maybe) 
+ - More EXP needed for higher levels (somehting like 1.5* the previous needed exp (or a logorithmic increase in exp needed based on level))
+
