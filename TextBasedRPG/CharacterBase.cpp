@@ -19,19 +19,23 @@ void CharacterBase::Heal(hp_t amount)
 
 void CharacterBase::GainExp(exp_t exp)
 {
+	level.currentExp += exp;
+
 	level.GainExperience(exp);
 
-	if (level.currentExp >= level.expToNextLevel && level.currentLevel <= level.MAX_LEVEL)
+	while (level.currentExp >= level.expToNextLevel && level.currentLevel <= level.MAX_LEVEL)
 	{
-		level.LevelUp();
+		level.currentExp -= level.expToNextLevel;
 		LevelUp();
+		level.expToNextLevel = level.CalcExpToNextLevel();
 	}
 }
 
 void CharacterBase::updateHealthEachLevel(double percent)
 {
-	hp_t multiplier = static_cast<hp_t>(level.currentLevel * ((attributes.strength + attributes.speed + attributes.luck + attributes.stamina) * percent));
-	health.MAX_HEALTH = health.currHealth * multiplier;
+	hp_t multiplier = static_cast<hp_t>(level.currentLevel * ((attributes.luck + attributes.stamina) * percent) + level.currentLevel *((attributes.strength * attributes.speed) * percent));
+	std::cout << "\n\nHealth is increasing by: " << multiplier << "\n\n";
+	health.MAX_HEALTH = (health.currHealth + multiplier);
 	health.currHealth = health.MAX_HEALTH;
 }
 

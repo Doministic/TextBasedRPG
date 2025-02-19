@@ -1,5 +1,5 @@
 #include <iostream>
-#include "Warrior.h"
+#include "Gladiator.h"
 
 int main()
 {

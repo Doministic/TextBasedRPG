@@ -1,9 +1,12 @@
 #include "Gladiator.h"
 
+Gladiator::Gladiator(const std::string &name)
+	: CharacterBase(name, 150, 20, Attributes(15, 10, 5, 3)) {}
 
-void Gladiator::LevelUp()
+void Gladiator::LevelUp()     
 {
-	//CharacterBase::LevelUp(); // Calls the base functionality of the super class first
+	level.currentLevel++; // increment the level of the character at the subclass level. 
+
 	if (level.currentLevel % 2 == 0)
 	{
 		attributes.strength += 3;
@@ -26,5 +29,5 @@ void Gladiator::LevelUp()
 		attributes.stamina += 2;
 	}
 
-	updateHealthEachLevel(0.01);
+	updateHealthEachLevel(0.02);
 }

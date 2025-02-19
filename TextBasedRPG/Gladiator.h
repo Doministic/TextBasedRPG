@@ -4,7 +4,7 @@
 class Gladiator : public CharacterBase
 {
 public:
-	Gladiator(const std::string& name) : CharacterBase(name, 150, 20, Attributes(15, 10, 5, 3)) {}
+	Gladiator(const std::string& name);
 
 	void LevelUp()override;
 };
