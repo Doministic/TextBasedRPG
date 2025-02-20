@@ -5,8 +5,6 @@ Gladiator::Gladiator(const std::string &name)
 
 void Gladiator::LevelUp()     
 {
-	level.currentLevel++; // increment the level of the character at the subclass level. 
-
 	if (level.currentLevel % 2 == 0)
 	{
 		attributes.strength += 3;

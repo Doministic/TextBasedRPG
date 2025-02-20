@@ -128,17 +128,31 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="CharacterBase.cpp" />
+    <ClCompile Include="Cleric.cpp" />
     <ClCompile Include="Gladiator.cpp" />
+    <ClCompile Include="Hunter.cpp" />
+    <ClCompile Include="Mage.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Paladin.cpp" />
+    <ClCompile Include="Rogue.cpp" />
     <ClCompile Include="Types.cpp" />
+    <ClCompile Include="VooDooWitchDoctor.cpp" />
+    <ClCompile Include="Warlock.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="Design Doc.txt" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CharacterBase.h" />
+    <ClInclude Include="Cleric.h" />
+    <ClInclude Include="Hunter.h" />
+    <ClInclude Include="Mage.h" />
+    <ClInclude Include="Paladin.h" />
+    <ClInclude Include="Rogue.h" />
     <ClInclude Include="Types.h" />
     <ClInclude Include="Gladiator.h" />
+    <ClInclude Include="VooDooWitchDoctor.h" />
+    <ClInclude Include="Warlock.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

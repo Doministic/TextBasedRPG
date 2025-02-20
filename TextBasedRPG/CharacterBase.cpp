@@ -20,14 +20,19 @@ void CharacterBase::Heal(hp_t amount)
 void CharacterBase::GainExp(exp_t exp)
 {
 	level.currentExp += exp;
-
-	level.GainExperience(exp);
-
+	level.GainExperience(level.currentExp);
+	std::cout << "Current Exp: " << level.currentExp << "\n";
 	while (level.currentExp >= level.expToNextLevel && level.currentLevel <= level.MAX_LEVEL)
 	{
 		level.currentExp -= level.expToNextLevel;
+		level.LevelUp();
 		LevelUp();
 		level.expToNextLevel = level.CalcExpToNextLevel();
+		if (level.currentLevel == level.MAX_LEVEL) {
+			level.currentExp = 0;
+			level.expToNextLevel = 0;
+			break;
+		}
 	}
 }
 

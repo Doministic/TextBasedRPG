@@ -40,7 +40,7 @@ void Level::GainExperience(exp_t xp)
 {
 	if (currentLevel >= MAX_LEVEL)
 	{
-		currentExp = expToNextLevel;
+		currentExp = 0;
 		currentLevel = MAX_LEVEL;
 		std::cout << "At MAX Level Cannot gain more experience.\n";
 		return;
@@ -58,8 +58,7 @@ void Level::LevelUp()
 		return;
 	}
 
-	currentExp -= expToNextLevel;
-	expToNextLevel = CalcExpToNextLevel();
+	currentLevel++;
 	std::cout << "Leveled up: " << currentLevel << " / " << MAX_LEVEL << "\n";
 }
 
